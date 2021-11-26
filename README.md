@@ -9,3 +9,8 @@ The regular variables in the javascript doesnt trigger changes as a change in va
 useState returns an array 
 
 When the server starts index.js file run first and render to dom but before rendering to dom, the app.js file needs to be evaluated and compiled.Once compiled, we have a js tree type representation of jsx template and then passed to dom, and js dom manipulation looks at this tree and inject into webpage in form of html. React uses virtual dom(tree like structure) while updating template and this is when component state changes and triggers the component to be revaluated.React compares the virtual dom with a new one and only updates the change.
+
+App component(parent) can pass data to the child compnent (Title). There can be different title page having same layout but different text so in the app function can pass args to the title function in the form of props.
+As jsx needs to have a parent tag, it can cause errors sometime (div tag of title is imported in app) so fragments are used which are basically emoty tags <></> if no key is there in the tag and React.Fragment are used if there are props in the parent div. fragments wont let the content be in a div tag.
+Portals put the componnt somewhere else.
+REFS - https://blog.logrocket.com/why-you-should-use-refs-sparingly-in-production/
