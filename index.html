@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>MY WEBSITE</h1>
+
+    <div id="banner">
+
+    </div>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+    <script type="text/babel">
+        const Banner = () => {
+            const title = "welcome to my website"
+            const subtitle = "A site to learn React"
+            const address = "https://www.linkedin.com/in/nistha-ghorela-232b521b8/"
+
+            // const handleClick = (e) => {
+            //     console.log("you clicked me")
+            //     console.log("This is the title", title)
+            //     console.log(e)
+            // }
+            
+            return (
+                <div>
+                <h1>{title.toUpperCase()}</h1>
+                <p>{subtitle}</p>
+                <p>Today's date: {new Date().toDateString()}</p>
+                <p>Random number: {Math.random() * 100}</p>
+                <a href={address}>visit the link</a>
+                {/* <button onClick = {handleClick}>Click here</button> */}
+                <button onClick = {(e) => console.log(e)}>Click here</button>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<Banner />, document.getElementById('banner'));
+    </script>
+</body>
+</html>
